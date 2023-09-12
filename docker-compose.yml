@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    container_name: serveur_web
+    image: nginx
+    ports:
+      - 8000:80
+  db:
+    container_name: serveur_db
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root            
